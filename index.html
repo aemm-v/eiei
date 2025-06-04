@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>มีหวานจัยอ๊ะยางงงงง ????</title>
+  <link href="https://fonts.googleapis.com/css2?family=FC+Minimal&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'FC Minimal', sans-serif;
+      background-color: white;
+      color: black;
+      text-align: center;
+      padding: 30px 10px;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    button {
+      padding: 15px 20px;
+      border: 2px solid black;
+      background-color: white;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 40%;
+    }
+    #yesBtn {
+      color: pink;
+    }
+    #noBtn {
+      color: black;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>มีหวานจัยอ๊ะยางงงงง ????</h1>
+
+  <div class="button-container">
+    <button id="yesBtn" onclick="openLovePage()">มีเเย้ววว ชื่ออ๋อมแอ๋ม🫶🏻😚</button>
+    <button id="noBtn" onclick="moveAndChangeText(this)">ม่ายยยยยยมี 🤥</button>
+  </div>
+
+  <script>
+    function openLovePage() {
+      const newWindow = window.open("", "_blank");
+      newWindow.document.write(`
+        <html>
+          <head>
+            <link href="https://fonts.googleapis.com/css2?family=FC+Minimal&display=swap" rel="stylesheet">
+            <style>
+              body {
+                font-family: 'FC Minimal', sans-serif;
+                background-color: white;
+                color: black;
+                text-align: center;
+                padding: 50px;
+              }
+            </style>
+          </head>
+          <body>
+            <h1>น่ารักตี้จุดในโลก 🥰🫶🏻💖<br>ตอบถูกนะค้าบบ มารับรางวัล 1 จุ้บ</h1>
+          </body>
+        </html>
+      `);
+    }
+
+    const texts = ["ตอบใหม่ !!!", "ตอบอีกที !", "คิดดีๆ !", "คิดใหม่"];
+    function moveAndChangeText(btn) {
+      const randomX = Math.floor(Math.random() * 100) - 50;
+      const randomY = Math.floor(Math.random() * 100) - 50;
+      btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+      const randomText = texts[Math.floor(Math.random() * texts.length)];
+      btn.innerText = randomText;
+    }
+  </script>
+
+</body>
+</html>
